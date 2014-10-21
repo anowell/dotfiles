@@ -1,0 +1,9 @@
+---
+zsh:
+  'files/.zshrc': '~/.zshrc'
+  'files/anowell.zsh-theme': '~/.oh-my-zsh/themes/anowell.zsh-theme'
+tmux:
+  'files/.tmux.conf': '~/.tmux.conf'
+vim:
+  'files/.vimrc': '~/.vimrc'
+
