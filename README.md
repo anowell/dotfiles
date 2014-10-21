@@ -20,3 +20,7 @@ dotfiles
     bin/rake backup           # backup configuration files in use into this repo
 
 After zsh config is installed, `bin/rake` can be shortened to just `rake` - as it should be.
+
+### and then...
+
+    make more awesome configuration, and add it to `manifest.yaml`
