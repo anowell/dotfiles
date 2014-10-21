@@ -5,10 +5,10 @@ dotfiles
 
 ### prereqs
 
-    colordiff     # because color...
-    rbenv         # sane management of ruby versions
-    oh-my-zsh     # installed to ~/.oh-my-zsh
-
+    colordiff                 # because color...
+    zsh-syntax-highlighting   # it's awesome and in the arch community repo
+    rbenv                     # sane management of ruby versions
+    oh-my-zsh                 # installed to ~/.oh-my-zsh
 
 ### usage
 
