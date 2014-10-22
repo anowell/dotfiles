@@ -15,7 +15,7 @@ ZSH_THEME="anowell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -39,5 +39,11 @@ eval "$(rbenv init -)"
 export EDITOR=vim
 export PATH=bin:$HOME/bin:/usr/local/bin:$PATH
 
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
+# Don't freakout if something that looks like filename expansion doesn't have matches
+# http://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
+# unsetopt nomatch
 
 

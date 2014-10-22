@@ -8,6 +8,7 @@ dotfiles
     colordiff                 # because color...
     zsh-syntax-highlighting   # it's awesome and in the arch community repo
     rbenv                     # sane management of ruby versions
+    xsel                      # for pbcopy/pbpaste aliases
     oh-my-zsh                 # installed to ~/.oh-my-zsh
 
 ### usage

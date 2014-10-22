@@ -1,22 +1,47 @@
-set tabstop=2       " Number of spaces that a <Tab> in the file counts for.
+set nocompatible
 
-set shiftwidth=2    " Number of spaces to use for each step of (auto)indent.
- 
-set expandtab       " Use the appropriate number of spaces to insert a <Tab>.
-                    " Spaces are used in indents with the '>' and '<' commands
-                    " and when 'autoindent' is on. To insert a real tab when
-                    " 'expandtab' is on, use CTRL-V <Tab>.
- 
-set smarttab        " When on, a <Tab> in front of a line inserts blanks
-                    " according to 'shiftwidth'. 'tabstop' is used in other
-                    " places. A <BS> will delete a 'shiftwidth' worth of space
-                    " at the start of the line.
+" Automatically cd into the directory that the file is in
+" autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
+set autochdir
 
-set smartindent      " Copy indent from current line when starting a new line
-                    " (typing <CR> in Insert mode or when using the "o" or "O"
-                    " command).
+" Remove any trailing whitespace that is in the file
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-set mouse=a         " Enable the use of the mouse. 
+" Who doesn't like autoindent?
+set autoindent cindent
+
+" Spaces are better than a tab character
+set expandtab
+set smarttab
+
+" Who wants an 8 character tab?  Not me!
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" Spaces >>> tab characters
+set expandtab
+set smarttab
+
+" Who doesn't like autoindent?
+set autoindent cindent
+
+" Allow using the mouse
+set mouse=a
+
+" This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
+inoremap jj <Esc>
+
+" Highlight things that we find with the search
+set hlsearch
+
+" Cool tab completion stuff
+set wildmenu
+set wildmode=longest:full,full
+
+" keep at least 5 lines above/below and left/right
+set scrolloff=5
+set sidescrolloff=5
 
 filetype plugin indent on
 syntax on
