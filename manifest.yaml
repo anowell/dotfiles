@@ -6,4 +6,6 @@ tmux:
   'files/.tmux.conf': '~/.tmux.conf'
 vim:
   'files/.vimrc': '~/.vimrc'
+sublime:
+  'files/Preferences.sublime-settings': '~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings'
 

@@ -5,11 +5,17 @@ dotfiles
 
 ### prereqs
 
-    colordiff                 # because color...
-    zsh-syntax-highlighting   # it's awesome and in the arch community repo
-    rbenv                     # sane management of ruby versions
-    xsel                      # for pbcopy/pbpaste aliases
-    oh-my-zsh                 # installed to ~/.oh-my-zsh
+    colordiff                 # (PAC) because color...
+    xsel                      # (PAC) for pbcopy/pbpaste aliases
+    zsh-syntax-highlighting   # (PAC) it's awesome and in the arch community repo
+    rbenv                     # (AUR) sane management of ruby versions
+    sublime-text-dev          # (AUR) for SublimeText 3 configuration
+    oh-my-zsh                 # (GIT) installed to ~/.oh-my-zsh
+
+I've listed Arch-specific packages, but it should be easy enough to find the equivalent for other distros
+-  PAC: Package name in Arch Repos
+-  AUR: Package name in the Arch User Repository
+-  GIT: Installed straight from Github
 
 ### usage
 
