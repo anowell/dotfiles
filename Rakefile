@@ -7,7 +7,7 @@ namespace :install do
   MANIFEST.each do |cfg, files|
     desc "Configure #{cfg} from dotfiles repo"
     task cfg do
-      files.each { |k, v| install_cfg(k, v) } 
+      files.each { |k, v| install_cfg(k, v) }
     end
   end
 
@@ -20,7 +20,7 @@ namespace :backup do
   MANIFEST.each do |cfg, files|
     desc "Backup local #{cfg} into dotfiles repo"
     task cfg do
-      files.each { |k, v| backup_cfg(v, k) } 
+      files.each { |k, v| backup_cfg(v, k) }
       `git status`
     end
   end
@@ -34,12 +34,12 @@ namespace :diff do
   MANIFEST.each do |cfg, files|
     desc "Diff dotfiles repo with local config for #{cfg}"
     task cfg do
-      files.each { |k, v| diff_cfg(k,v) } 
+      files.each { |k, v| diff_cfg(k,v) }
     end
   end
 
   def diff_cfg(src, dest)
-    cmd = "colordiff #{::File.join(DIR, src)} #{::File.expand_path(dest)}"
+    cmd = "colordiff '#{::File.join(DIR, src)}' '#{::File.expand_path(dest)}'"
     puts cmd
     system(cmd)
   end
