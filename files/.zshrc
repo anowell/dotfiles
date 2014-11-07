@@ -32,6 +32,13 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git docker rake)
 
 source $ZSH/oh-my-zsh.sh
+
+for file in ~/.zsh.d/* ; do
+  if [ -f "$file" ] ; then
+    . "$file"
+  fi
+done
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(rbenv init -)"
@@ -41,6 +48,9 @@ export PATH=bin:$HOME/bin:/usr/local/bin:$PATH
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+alias lpp='lpass show --password -c'
+alias lpu='lpass show --username -c'
 
 # Don't freakout if something that looks like filename expansion doesn't have matches
 # http://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task

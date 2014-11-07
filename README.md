@@ -14,7 +14,7 @@ The rake task installs configuration that expects several other components
     zsh-syntax-highlighting   # (zsh) it's awesome and in the arch community repo
     sublime-text-dev          # (sublime) for SublimeText 3 configuration
     oh-my-zsh                 # (zsh) installed to ~/.oh-my-zsh directly from github
-
+    lpass                     # (zsh) command line access to lastpass aliased to lpp and lpu
 
 ### usage
 
