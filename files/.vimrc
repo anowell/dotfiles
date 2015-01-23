@@ -26,8 +26,8 @@ set smarttab
 " Who doesn't like autoindent?
 set autoindent cindent
 
-" Allow using the mouse
-set mouse=a
+" Allow using the mouse in normal mode
+set mouse=v
 
 " This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
 inoremap jj <Esc>
