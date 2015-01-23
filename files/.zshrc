@@ -51,6 +51,8 @@ alias pbpaste='xsel --clipboard --output'
 
 alias lpp='lpass show --password -c'
 alias lpu='lpass show --username -c'
+alias lpls='lpass ls'
+alias lpgrep='lpass ls | grep -i'
 
 # Don't freakout if something that looks like filename expansion doesn't have matches
 # http://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
