@@ -1,12 +1,14 @@
 {
-    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-    "default_line_ending": "unix",
-    "draw_white_space": "all",
-    "font_size": 16,
-    "ignored_packages": [],
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true,
-    "update_check": false,
-    "vintage_start_in_command_mode": true
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"default_line_ending": "unix",
+	"draw_white_space": "all",
+	"font_size": 15,
+	"ignored_packages":
+	[
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"update_check": false,
+	"vintage_start_in_command_mode": true
 }

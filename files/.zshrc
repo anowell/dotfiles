@@ -48,6 +48,7 @@ export PATH=bin:$HOME/bin:/usr/local/bin:$PATH
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+alias pbclear='xsel --clipboard --clear'
 
 alias lpp='lpass show --password -c'
 alias lpu='lpass show --username -c'
