@@ -29,7 +29,7 @@ DISABLE_AUTO_TITLE="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git docker rake)
+plugins=(git docker rake aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -46,6 +46,9 @@ eval "$(rbenv init -)"
 export EDITOR=vim
 export PATH=bin:$HOME/bin:/usr/local/bin:$PATH
 
+export GOPATH=~/go
+export PATH=$PATH:~/go/bin
+
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias pbclear='xsel --clipboard --clear'
@@ -55,6 +58,7 @@ alias lpu='lpass show --username -c'
 alias lpls='lpass ls'
 alias lpgrep='lpass ls | grep -i'
 
+alias ccat='source-highlight --out-format=esc -o STDOUT -i'
 # Don't freakout if something that looks like filename expansion doesn't have matches
 # http://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
 # unsetopt nomatch
