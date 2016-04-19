@@ -45,9 +45,11 @@ eval "$(rbenv init -)"
 
 export EDITOR=vim
 export PATH=bin:$HOME/bin:/usr/local/bin:$PATH
-
-export GOPATH=~/go
+export PATH=$HOME/.multirust/toolchains/stable/cargo/bin:$PATH
 export PATH=$PATH:~/go/bin
+
+export RUST_SRC_PATH=$HOME/proj/rust/src
+export GOPATH=$HOME/go
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
@@ -63,4 +65,6 @@ alias ccat='source-highlight --out-format=esc -o STDOUT -i'
 # http://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
 # unsetopt nomatch
 
-
+function weather {
+  curl http://wttr.in/${1-:mazatlan}
+}
