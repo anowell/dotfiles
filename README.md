@@ -16,6 +16,7 @@ The rake task installs configuration that expects several other components
     oh-my-zsh                 # (zsh) installed to ~/.oh-my-zsh directly from github
     lastpass-cli              # (zsh) command line access to lastpass aliased to lpp and lpu
     source-highlight          # (zsh) for ccat alias
+    visual-studio-code        # (vscode) for VS Code configuration
 
 ### usage
 
@@ -24,16 +25,19 @@ The rake task installs configuration that expects several other components
     rake backup:sublime   # Backup local sublime into dotfiles repo
     rake backup:tmux      # Backup local tmux into dotfiles repo
     rake backup:vim       # Backup local vim into dotfiles repo
+    rake backup:vscode    # Backup local vscode into dotfiles repo
     rake backup:zsh       # Backup local zsh into dotfiles repo
     rake diff             # diff all dotfiles
     rake diff:sublime     # Diff dotfiles repo with local config for sublime
     rake diff:tmux        # Diff dotfiles repo with local config for tmux
     rake diff:vim         # Diff dotfiles repo with local config for vim
+    rake diff:vscode      # Diff dotfiles repo with local config for vscode
     rake diff:zsh         # Diff dotfiles repo with local config for zsh
     rake install          # install all dotfiles
     rake install:sublime  # Configure sublime from dotfiles repo
     rake install:tmux     # Configure tmux from dotfiles repo
     rake install:vim      # Configure vim from dotfiles repo
+    rake install:vscode   # Configure vscode from dotfiles repo
     rake install:zsh      # Configure zsh from dotfiles repo
 
 ### and then...
