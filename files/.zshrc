@@ -17,16 +17,13 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git docker rake aws)
+plugins=(git cargo docker aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,7 +44,6 @@ export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.meteor
 
 export GOPATH=$HOME/go
-export CARGO_INCREMENTAL=true
 export fpath=(/home/anowell/proj/algorithmia-cli/completions/zsh $fpath)
 autoload -U compinit
 compinit
@@ -62,10 +58,4 @@ alias lpls='lpass ls'
 alias lpgrep='lpass ls | grep -i'
 
 alias ccat='source-highlight --out-format=esc -o STDOUT -i'
-# Don't freakout if something that looks like filename expansion doesn't have matches
-# http://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
-# unsetopt nomatch
 
-function weather {
-  curl http://wttr.in/${1-:mazatlan}
-}
