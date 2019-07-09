@@ -11,5 +11,11 @@
   "rust.rls": {
     "executable": "rustup",
     "args": ["run", "nightly", "rls"]
-  }
+  },
+  "rust.clippy_preference": "on",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.acceptSuggestionOnEnter": "off"
 }

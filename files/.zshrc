@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+
+export ZSH=/usr/share/oh-my-zsh
+export ZSH_CUSTOM=~/.zsh.d
 ZSH_THEME="anowell"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -40,10 +42,7 @@ eval "$(rbenv init -)"
 export EDITOR=vim
 export PATH=bin:$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/.meteor
 
-export GOPATH=$HOME/go
 export fpath=(/home/anowell/proj/algorithmia-cli/completions/zsh $fpath)
 autoload -U compinit
 compinit
@@ -58,4 +57,4 @@ alias lpls='lpass ls'
 alias lpgrep='lpass ls | grep -i'
 
 alias ccat='source-highlight --out-format=esc -o STDOUT -i'
-
+alias ccl='cargo c --color=always 2>&1 | less'
