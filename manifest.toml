@@ -1,0 +1,14 @@
+[zsh]
+'files/.zshrc' = '~/.zshrc'
+
+[tmux]
+'files/.tmux.conf' = '~/.tmux.conf'
+
+[vim]
+'files/.vimrc' = '~/.vimrc'
+
+[vscode]
+'files/vscode-user-settings.json' = '~/.config/Code/User/settings.json'
+
+[starship]
+'files/starship.toml' = '~/.config/starship.toml'

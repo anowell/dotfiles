@@ -3,43 +3,41 @@ dotfiles
 
 ...cuz configuration like this should take seconds, not hours...
 
-### prereqs
+### Install
 
-Running the rake tasks really only depends on `rake` and `colordiff`
+Install `colordiff` (required by `dotfiles diff`) and build or install dotfiles with `cargo`.
 
-The rake task installs configuration that expects several other components
+```
+cargo install --git https://github.com/anowell/dotfiles
+```
+
+### My dotfile configuration
+
+Installing dotfiles does not install my personal config files.
+Dotfiles reads `manifest.toml` in the working directory which specifies which config files it manages.
+To use my config, clone this repo and run dotfiles within the repo root.
+
+My dotfile configuration assumes other components:
 
     xsel                      # (zsh) for pbcopy/pbpaste aliases
-    rbenv                     # (zsh) for sane ruby version management
-    zsh-syntax-highlighting   # (zsh) it's awesome and in the arch community repo
-    sublime-text-dev          # (sublime) for SublimeText 3 configuration
-    oh-my-zsh                 # (zsh) installed to ~/.oh-my-zsh directly from github
-    lastpass-cli              # (zsh) command line access to lastpass aliased to lpp and lpu
-    source-highlight          # (zsh) for ccat alias
+    zsh-syntax-highlighting   # (zsh) 
     visual-studio-code        # (vscode) for VS Code configuration
 
-### usage
+### Usage
 
-    $ rake -T
-    rake backup           # backup all dotfiles
-    rake backup:sublime   # Backup local sublime into dotfiles repo
-    rake backup:tmux      # Backup local tmux into dotfiles repo
-    rake backup:vim       # Backup local vim into dotfiles repo
-    rake backup:vscode    # Backup local vscode into dotfiles repo
-    rake backup:zsh       # Backup local zsh into dotfiles repo
-    rake diff             # diff all dotfiles
-    rake diff:sublime     # Diff dotfiles repo with local config for sublime
-    rake diff:tmux        # Diff dotfiles repo with local config for tmux
-    rake diff:vim         # Diff dotfiles repo with local config for vim
-    rake diff:vscode      # Diff dotfiles repo with local config for vscode
-    rake diff:zsh         # Diff dotfiles repo with local config for zsh
-    rake install          # install all dotfiles
-    rake install:sublime  # Configure sublime from dotfiles repo
-    rake install:tmux     # Configure tmux from dotfiles repo
-    rake install:vim      # Configure vim from dotfiles repo
-    rake install:vscode   # Configure vscode from dotfiles repo
-    rake install:zsh      # Configure zsh from dotfiles repo
+```
+$ dotfiles -h             # Prints dotfiles help
+$ dotfiles                # Shows which apps managed by dotfiles (based on manifest.toml)
+
+$ dotfiles backup         # Backup all dotfiles
+$ dotfiles diff           # Diff all dotfiles
+$ dotfiles install        # install all dotfiles
+
+$ dotfiles backup tmux    # Backup local tmux into dotfiles repo
+$ dotfiles diff vim       # Diff dotfiles repo with local config for vim
+$ dotfiles install zsh    # Configure zsh from dotfiles repo
+```
 
 ### and then...
 
-    make more awesome configuration, and add it to `manifest.yaml`
+make more awesome configuration, and add it to `manifest.toml`
