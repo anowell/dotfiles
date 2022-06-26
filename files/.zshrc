@@ -21,5 +21,9 @@ export PATH=bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 export HISTFILE=$HOME/.zhistory
 export SAVEHIST=2000
 
+# Fix history search in tmux
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 alias pbcopy='xsel --clipboard --input'
 alias ccl='cargo c --color=always | less'
