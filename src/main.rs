@@ -1,15 +1,14 @@
-use clap::{Parser, ArgEnum};
 use anyhow::Result;
-use std::fs;
-use std::env::current_dir;
-use std::path::PathBuf;
-use std::collections::HashMap;
+use clap::{ArgEnum, Parser};
 use duct::cmd;
-use shellexpand;
+use std::collections::HashMap;
+use std::env::current_dir;
+use std::fs;
+use std::path::PathBuf;
 
 #[derive(Parser, Debug)]
 struct Args {
-    #[clap(arg_enum)] 
+    #[clap(arg_enum)]
     cmd: Option<Cmd>,
     /// Get possible values by running 'dotfiles'
     app: Option<String>,
@@ -27,7 +26,8 @@ enum Cmd {
 
 fn main() -> Result<()> {
     let args: Args = Args::parse();
-    let manifest: HashMap<String, HashMap<String, String>> = toml::from_str(&fs::read_to_string("manifest.toml")?)?;
+    let manifest: HashMap<String, HashMap<String, String>> =
+        toml::from_str(&fs::read_to_string("manifest.toml")?)?;
     let apps: Vec<String> = manifest.keys().map(ToString::to_string).collect();
     let configs = match args.app {
         Some(app) => manifest.get(&app).unwrap().clone(),
@@ -44,14 +44,14 @@ fn main() -> Result<()> {
         Some(Cmd::Install) => install(&configs)?,
         Some(Cmd::Backup) => backup(&configs)?,
         Some(Cmd::Diff) => diff(&configs)?,
-        None => { 
+        None => {
             println!("Usage: dotfiles <cmd> [app]");
             println!("Commands: install, backup, diff");
             println!("Apps:");
             for app in apps {
                 println!("  {}", app);
             }
-        },
+        }
     }
 
     Ok(())
