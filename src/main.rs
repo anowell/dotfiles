@@ -1,4 +1,4 @@
-use clap::Clap;
+use clap::{Parser, ArgEnum};
 use anyhow::Result;
 use std::fs;
 use std::env::current_dir;
@@ -7,7 +7,7 @@ use std::collections::HashMap;
 use duct::cmd;
 use shellexpand;
 
-#[derive(Clap, Debug)]
+#[derive(Parser, Debug)]
 struct Args {
     #[clap(arg_enum)] 
     cmd: Option<Cmd>,
@@ -15,7 +15,7 @@ struct Args {
     app: Option<String>,
 }
 
-#[derive(Clap, Debug, Copy, Clone)]
+#[derive(ArgEnum, Debug, Copy, Clone)]
 enum Cmd {
     /// Installs files from dotfiles repo to system
     Install,
