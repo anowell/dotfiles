@@ -18,11 +18,8 @@ eval "$(starship init zsh)"
 
 export EDITOR=vim
 export PATH=bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
+export HISTFILE=$HOME/.zhistory
+export SAVEHIST=2000
 
-if command -v xsel > /dev/null; then
-  alias pbcopy='xsel --clipboard --input'
-elif command -v clip.exe > /dev/null; then
-  alias pbcopy='clip.exe'
-fi
-
+alias pbcopy='xsel --clipboard --input'
 alias ccl='cargo c --color=always | less'
