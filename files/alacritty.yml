@@ -1,0 +1,17 @@
+window:
+  decorations: none
+  start_maximized: true
+  # startup_mode: Maximized
+
+font:
+  normal:
+    family: Inconsolata
+  size: 14.0
+
+shell:
+  program: /bin/zsh
+  args:
+    - -c
+    - tmux
+    - new-session
+

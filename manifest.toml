@@ -12,3 +12,7 @@
 
 [starship]
 'files/starship.toml' = '~/.config/starship.toml'
+
+[alacritty]
+'files/alacritty.yml' = '~/.config/alacritty/alacritty.yml'
+
