@@ -1,5 +1,5 @@
 use anyhow::Result;
-use clap::{ArgEnum, Parser};
+use clap::{Parser, Subcommand};
 use duct::cmd;
 use std::collections::HashMap;
 use std::env::current_dir;
@@ -8,13 +8,13 @@ use std::path::PathBuf;
 
 #[derive(Parser, Debug)]
 struct Args {
-    #[clap(arg_enum)]
+    #[command(subcommand)]
     cmd: Option<Cmd>,
     /// Get possible values by running 'dotfiles'
     app: Option<String>,
 }
 
-#[derive(ArgEnum, Debug, Copy, Clone)]
+#[derive(Subcommand, Debug, Copy, Clone)]
 enum Cmd {
     /// Installs files from dotfiles repo to system
     Install,

@@ -5,7 +5,7 @@ version = "0.1.0"
 
 [dependencies]
 anyhow = "*"
-clap = { version = "3.0", features = ["derive"] }
+clap = { version = "4.0", features = ["derive"] }
 duct = "*"
 shellexpand = "*"
 toml = "*"
