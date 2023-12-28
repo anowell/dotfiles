@@ -10,4 +10,4 @@ program = "/bin/zsh"
 
 [window]
 decorations = "none"
-start_maximized = true
+# startup_mode = "Maximized"
