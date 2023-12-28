@@ -21,9 +21,15 @@ export PATH=bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 export HISTFILE=$HOME/.zhistory
 export SAVEHIST=2000
 
+# Disable XON/OFF (Ctrl-S pause, Ctrl-Q resume)
+stty -ixon
+
 # Fix history search in tmux
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 alias pbcopy='xsel --clipboard --input'
 alias ccl='cargo c --color=always | less'
+alias open='xdg-open'
+alias xhjwt="xh -A bearer -a $JWT_TOKEN"
+alias hx='helix'

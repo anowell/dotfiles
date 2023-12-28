@@ -5,17 +5,26 @@
     "**/tmp": true
   },
   "files.trimTrailingWhitespace": true,
-  "window.zoomLevel": 0,
-  "editor.wordWrap": true,
-  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.wordWrap": "on",
   "rust.rls": {
     "executable": "rustup",
-    "args": ["run", "nightly", "rls"]
+    "args": [
+      "run",
+      "nightly",
+      "rls"
+    ]
   },
   "rust.clippy_preference": "on",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
   "editor.copyWithSyntaxHighlighting": false,
-  "editor.acceptSuggestionOnEnter": "off"
+  "editor.acceptSuggestionOnEnter": "off",
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "sema soft chroma",
+  "window.zoomLevel": 3,
+  "editor.inlineSuggest.enabled": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "svelte.enable-ts-plugin": true
 }
