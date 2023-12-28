@@ -1,0 +1,13 @@
+[font]
+size = 14.0
+
+[font.normal]
+family = "Inconsolata"
+
+[shell]
+args = ["-c", "tmux", "new-session"]
+program = "/bin/zsh"
+
+[window]
+decorations = "none"
+start_maximized = true
