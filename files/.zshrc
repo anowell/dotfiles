@@ -16,7 +16,7 @@ fi
 
 eval "$(starship init zsh)"
 
-export EDITOR=vim
+export EDITOR=/usr/bin/helix
 export PATH=bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 export HISTFILE=$HOME/.zhistory
 export SAVEHIST=2000

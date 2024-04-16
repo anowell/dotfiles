@@ -18,3 +18,6 @@
 
 [helix]
 'files/helix.toml' =  '~/.config/helix/config.toml'
+
+[zellij]
+'files/zellij.kdl' =  '~/.config/zellij/config.kdl'

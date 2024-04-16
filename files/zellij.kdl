@@ -1,0 +1,34 @@
+keybinds {
+    unbind "Ctrl b" "Ctrl s" "Ctrl o" "Ctrl q"
+	pane {
+	    // These are default bindings, but that auto-switch back to normal mode
+        bind "h" "Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "l" "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "j" "Down" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "k" "Up" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "p" { SwitchFocus; SwitchToMode "Normal"; }
+	}
+    tmux {
+	    bind "`" { SwitchToMode "Normal"; WriteChars "`"; } 
+		bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
+		bind "Space" { NextSwapLayout; SwitchToMode "Normal"; }
+        bind "o" { FocusNextPane; SwitchToMode "Normal"; }
+	}
+	session {
+		bind "Home" { SwitchToMode "Normal"; }
+	}
+	/- shared_except "locked" {
+		bind "`" { SwitchToMode "tmux"; }
+	}
+	shared_except "locked" "scroll" {
+		bind "Ctrl v" { SwitchToMode "Scroll"; }
+		bind "Alt /" { SwitchToMode "EnterSearch"; SearchInput 0; }
+	}
+	shared_except "locked" "session" {
+		bind "Home" { SwitchToMode "Session"; }
+	}
+}
+
+theme "molokai-dark"
+scrollback_editor "/usr/bin/helix"
+// default_layout "compact"

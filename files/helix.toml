@@ -1,2 +1,7 @@
 [editor.lsp]
 display-inlay-hints = true
+
+
+[editor.soft-wrap]
+enable = true
+max-indent-retain = 0

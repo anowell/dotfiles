@@ -21,7 +21,6 @@
   "editor.copyWithSyntaxHighlighting": false,
   "editor.acceptSuggestionOnEnter": "off",
   "window.menuBarVisibility": "toggle",
-  "workbench.colorTheme": "sema soft chroma",
   "window.zoomLevel": 3,
   "editor.inlineSuggest.enabled": true,
   "rust-analyzer.inlayHints.parameterHints.enable": false,

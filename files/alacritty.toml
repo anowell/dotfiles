@@ -5,7 +5,8 @@ size = 14.0
 family = "Inconsolata"
 
 [shell]
-args = ["-c", "tmux", "new-session"]
+# args = ["-c", "tmux", "new-session"]
+args = ["-c", "zellij"]
 program = "/bin/zsh"
 
 [window]
