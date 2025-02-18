@@ -83,7 +83,11 @@ fn diff(configs: &HashMap<String, String>) -> Result<()> {
         println!("colordiff {} {}", v, k);
         let install_path = PathBuf::from(&*shellexpand::full(v)?);
         if install_path.exists() {
-            cmd!("colordiff", k, install_path).run()?;
+            if let Err(e) = cmd!("colordiff", k, install_path).run() {
+                if e.kind() == std::io::ErrorKind::NotFound {
+                    return Err(e.into());
+                }
+            }
         } else {
             println!("Not installed: {}", v);
         }
