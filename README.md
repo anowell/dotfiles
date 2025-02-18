@@ -20,8 +20,9 @@ To use my config, clone this repo and run dotfiles within the repo root.
 My dotfile configuration assumes other components:
 
     xsel                      # (zsh) for pbcopy/pbpaste aliases
-    zsh-syntax-highlighting   # (zsh) 
+    zsh-syntax-highlighting   # (zsh)
     visual-studio-code        # (vscode) for VS Code configuration
+    zoxide                    # (zsh) for z helper
 
 ### Usage
 

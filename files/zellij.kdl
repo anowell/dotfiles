@@ -17,9 +17,6 @@ keybinds {
 	session {
 		bind "Home" { SwitchToMode "Normal"; }
 	}
-	/- shared_except "locked" {
-		bind "`" { SwitchToMode "tmux"; }
-	}
 	shared_except "locked" "scroll" {
 		bind "Ctrl v" { SwitchToMode "Scroll"; }
 		bind "Alt /" { SwitchToMode "EnterSearch"; SearchInput 0; }
