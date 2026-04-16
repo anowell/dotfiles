@@ -27,3 +27,7 @@
 
 [karabiner]
 'files/karabiner.json' = '~/.config/karabiner/karabiner.json'
+
+[jj]
+'files/jj.toml' = '~/.config/jj/config.toml'
+
