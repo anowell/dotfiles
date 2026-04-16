@@ -21,3 +21,9 @@
 
 [zellij]
 'files/zellij.kdl' =  '~/.config/zellij/config.kdl'
+
+[zed]
+'files/zed.json' = '~/.config/zed/settings.json'
+
+[karabiner]
+'files/karabiner.json' = '~/.config/karabiner/karabiner.json'

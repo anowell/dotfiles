@@ -1,0 +1,96 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "format_on_save": "off",
+  "helix_mode": true,
+  "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true,
+          "open": false,
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {},
+      }
+    },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-latest",
+    },
+  },
+  "context_servers": {
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
+      "env": {},
+    },
+  },
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "subtle",
+  },
+  "telemetry": {
+    "metrics": true,
+    "diagnostics": true,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Mirage",
+    "dark": "One Dark",
+  },
+
+  "languages": {
+    "TypeScript": {
+      "formatter": "language_server",
+      "language_servers": ["biome", "..."],
+
+      "code_actions_on_format": {
+        // "source.organizeImports": true,
+        // "source.fixAll.eslint": true
+      },
+    },
+    "TSX": {
+      "formatter": "language_server",
+      "language_servers": ["biome", "..."],
+      "code_actions_on_format": {
+        // "source.organizeImports": true,
+      },
+    },
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true,
+      },
+    },
+    "prisma-language-server": {
+      "settings": {
+
+      },
+    },
+  },
+  "max_tabs": 6,
+}

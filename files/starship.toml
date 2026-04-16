@@ -3,11 +3,14 @@ add_newline = false
 format = """\
   $time\
   $directory\
-  $git_branch\
-  $git_status\
+  ${custom.jj}\
   $cmd_duration\
   $character\
   """
+  # ${custom.jj_change}\
+  # ${custom.jj_status}\
+  # $git_branch\
+  # $git_status\
 
 [time]
 disabled = false
@@ -19,3 +22,37 @@ format = '([\[$deleted$renamed$modified$untracked\]]($style) )'
 
 [cmd_duration]
 format = '[$duration]($style) '
+
+
+[git_commit] # Hide the git commit prompt
+disabled = true
+
+[custom.jj]
+when = "jj-starship detect"
+shell = ["jj-starship"]
+format = "$output "
+
+[custom.jj_change]
+description = "The working copy of the repo in your current directory: workspaces (if relevant), change ID, bookmarks"
+command     = ''' jj log --ignore-working-copy --no-graph -r=@ -T='separate(" ", working_copies, change_id.shortest(), bookmarks,)' '''
+when        = ''' test -n $(jj log --no-graph -r=@ -T='change_id') || exit 1 '''
+format      = 'on [$symbol ($output)]($style) '
+symbol      = '🐦'
+style       = 'bold purple'
+
+[custom.jj_status]
+description = "Show JJ working copy summary flags"
+command = '''
+jj diff --ignore-working-copy -r @ --summary | awk '{print $1}' | sort | uniq | tr -d "\n"
+'''
+when = ''' jj diff -r @ --summary | grep . '''
+format = '[\($symbol($output)\)]($style) '
+symbol = ''
+style = 'bold red'
+
+[custom.jj_desc]
+description = "The description of your working copy, if set"
+command     = ''' jj log --no-graph -r=@ -T="description.first_line()" '''
+when        = ''' test -n $(jj log --no-graph -r=@ -T='description') || exit 1 '''
+format      = '$symbol [($output)]($style) '
+symbol      = '|'

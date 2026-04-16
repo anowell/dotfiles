@@ -2,7 +2,8 @@
 size = 14.0
 
 [font.normal]
-family = "Inconsolata"
+family = "MesloLGS Nerd Font"
+# family = "Inconsolata"
 
 [terminal.shell]
 # args = ["-c", "tmux", "new-session"]
@@ -12,7 +13,11 @@ program = "/bin/zsh"
 [window]
 decorations = "full"
 startup_mode = "Maximized"
-opacity = 0.95
+# opacity = 0.95
+option_as_alt = "OnlyLeft"
 
 [terminal]
 
+
+[general]
+live_config_reload = true
