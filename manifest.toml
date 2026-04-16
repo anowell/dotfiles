@@ -31,3 +31,9 @@
 [jj]
 'files/jj.toml' = '~/.config/jj/config.toml'
 
+[claude]
+'files/claude/status.sh' = '~/.claude/claude-status.sh'
+'files/claude/settings.json' = '~/.claude/settings.json'
+'files/claude/block-env.sh' = '~/.claude/hooks/block-env.sh'
+'files/claude/block-git.sh' = '~/.claude/hooks/block-git.sh'
+'files/claude/block-repo-root-edits.sh' = '~/.claude/hooks/block-repo-root-edits.sh'
